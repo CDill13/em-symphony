@@ -11,7 +11,7 @@ class EventForm extends Component {
             eventPostBody: '',
             eventImage: ''
         }
-
+        this.postEvent = this.postEvent.bind(this);
     }
 
     editPost(eventItem, event){
@@ -20,7 +20,8 @@ class EventForm extends Component {
         })
     }
 
-    postEvent(){
+    postEvent(event){
+        event.preventDefault()
         let eventPost = {
             title: this.state.eventTitle,
             dateCreated: this.state.eventCreationDate,

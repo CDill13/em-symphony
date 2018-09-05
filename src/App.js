@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import EventForm from './components/EventForm';
-import logo from './music-favicon.png';
+import Header from "./components/common/headerFooter/Header";
+import Footer from "./components/common/headerFooter/Footer";
+import routes from "./routes";
+// import logo from './music-favicon.png';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          <EventForm />
+        <Header />
+        {routes}
+        <Footer />
       </div>
     );
   }
 }
+
 
 export default App;
